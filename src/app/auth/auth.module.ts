@@ -4,6 +4,7 @@ import { AuthRoutingRoutingModule } from './auth-routing-routing.module';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -15,7 +16,8 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingRoutingModule
+    AuthRoutingRoutingModule,
+    MaterialModule
   ]
 })
 export class AuthModule { }
