@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthRoutingRoutingModule } from './auth-routing-routing.module';
-import { LayoutComponent } from './pages/layout/layout.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 
 
 
 @NgModule({
   declarations: [
-    LayoutComponent,
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    LayoutPageComponent
   ],
   imports: [
     CommonModule,
