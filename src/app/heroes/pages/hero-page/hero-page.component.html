@@ -7,7 +7,7 @@
 </ng-template>
 
 <div *ngIf="hero; else divLoading" class="grid p-2">
-  <mat-card class="col-12 sm:col-6">
+  <mat-card appearance="outlined" class="col-12 sm:col-6">
     <mat-card-header>
       <div mat-card-avatar
         [ngStyle]="{'background-image': 'url(' + (hero | heroImage) + ')', 'background-size': 'cover'}"></div>
@@ -16,7 +16,7 @@
     </mat-card-header>
     <img mat-card-image [src]="hero | heroImage" [alt]="hero.superhero">
   </mat-card>
-  <mat-card class="col-12 sm:col-6">
+  <mat-card appearance="outlined" class="col-12 sm:col-6">
     <mat-card-header>
       <mat-card-title>Information</mat-card-title>
       <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
