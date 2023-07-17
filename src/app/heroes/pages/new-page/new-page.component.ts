@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
-import { filter, of, switchMap, tap } from 'rxjs';
+import { filter, switchMap} from 'rxjs';
 
 import { Hero, Publisher } from '../../interfaces/hero.interface';
 import { HeroesService } from '../../services/heroes.service';
@@ -65,7 +65,6 @@ export class NewPageComponent implements OnInit {
   onSubmit(): void {
     console.log({ isValid: this.heroForm.valid, ...this.heroForm.value, newDate: Date.now() });
     if (this.heroForm.invalid) {
-      console.log('Form is invalid');
       return;
     }
 
