@@ -23,12 +23,11 @@ import { AuthService } from '../services/auth.service';
 // }
 
 const checkAuthStatus = (): boolean | Observable<boolean> => {
-  //se inyectan el AuthService y el Router
+  //injenting authService and router
   const authService: AuthService = inject(AuthService);
   const router: Router = inject(Router);
 
   return authService.checkoutAuthentication().pipe(
-    tap(isAuthenticated => console.log({ 'Authenticated': isAuthenticated })),
     tap((isAuthenticated) => {
       if (!isAuthenticated) {
         router.navigate(['/auth/login'])
