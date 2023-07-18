@@ -17,10 +17,9 @@ export class LoginPageComponent {
 
   onLogin(): void {
     this.authService.login('admin@example.com', 'admin')
-      .subscribe(user => {
-        console.log({ user });
+      .subscribe(() => {
         this.router.navigate(['/']);
-      })
+      });
   }
 
 }

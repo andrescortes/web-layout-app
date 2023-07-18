@@ -31,8 +31,8 @@ export class AuthService {
     localStorage.clear();
   }
 
-  checkoutAuthentication(): Observable<boolean> | boolean {
-    if (!localStorage.getItem('token')) return false;
+  checkoutAuthentication(): Observable<boolean> {
+    if (!localStorage.getItem('token')) return of(false);
 
     const token = localStorage.getItem('token');
 
@@ -41,7 +41,7 @@ export class AuthService {
         tap(user => this.user = user),
         map(user => !!user),
         catchError(() => of(false))
-      )
+      );
   }
 
 }
